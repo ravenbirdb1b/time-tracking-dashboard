@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import ReportCard from "./components/ReportCard";
+
+import userData from "./data/data.json";
+import UserReport from "./components/UserReport";
 
 function App() {
+  console.log(userData);
+  const [selectedTimeframe, setSelectedTimeframe] = useState("daily");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="user-report-wrapper">
+        <UserReport
+          selectedTimeframe={selectedTimeframe}
+          setSelectedTimeframe={setSelectedTimeframe}
+        />
+        {userData.map((data, idx) => (
+          <ReportCard
+            reportData={data}
+            selectedTimeframe={selectedTimeframe}
+            key={idx}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,38 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 .App {
-  text-align: center;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Rubik", sans-serif;
+  overflow: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-report-wrapper {
+  padding: 4rem 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.report-card-wrapper {
+  max-width: 315px;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  position: relative;
+}
+
+.report-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 14px;
+  padding: 2rem;
+  z-index: 5;
+  position: inherit;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 3;
+  img {
+    width: 70px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.report-card-header {
+  font-size: 18px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.report-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.report-hours {
+  font-size: 24px;
+}
+
+.report-last-week {
+  color: hsl(236, 100%, 87%);
+}
+
+.report-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.report-wrapper {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+}
+
+.user-report {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: hsl(246, 80%, 60%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.user-profile-photo {
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 46px;
+  height: 46px;
+  img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.about-report {
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+}
+.user-name {
+  font-weight: 400;
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.time-type-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  text-transform: capitalize;
+  color: hsl(236, 100%, 87%);
+}
+
+.selected-type {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
